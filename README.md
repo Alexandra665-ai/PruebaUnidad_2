@@ -42,6 +42,27 @@ Abrir en el navegador:
 ```text
 http://localhost:3000
 ```
+## Ejemplos de uso
+
+### Listar todos los contactos
+GET http://localhost:3000/api/contactos
+
+### Obtener contacto por ID
+GET http://localhost:3000/api/contactos/2
+
+### Crear un contacto (requiere API Key)
+POST http://localhost:3000/api/contactos
+Header: x-api-key: Admin123
+Body:
+{
+  "nombre": "Juan Pérez",
+  "email": "juan@gmail.com",
+  "telefono": "912345678"
+}
+
+### Eliminar un contacto (requiere API Key)
+DELETE http://localhost:3000/api/contactos/2
+Header: x-api-key: Admin123
 
 ## Endpoints
 
@@ -69,6 +90,5 @@ El sistema utiliza códigos HTTP:
 
 ## HTTPS
 
-HTTPS protege la información intercambiada entre cliente y servidor mediante cifrado, evitando accesos no autorizados y aumentando la seguridad de la aplicación.
-
+HTTPS protege la información intercambiada entre el cliente y el servidor mediante cifrado, evitando que terceros puedan interceptar los datos en la red. En esta aplicación protege principalmente el header x-api-key que se envía en cada solicitud POST y DELETE, además de los datos ingresados en el formulario. Sin HTTPS, cualquier persona en la misma red podría ver esa clave y utilizarla sin autorización.
 
