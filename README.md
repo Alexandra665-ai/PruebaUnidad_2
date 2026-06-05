@@ -55,8 +55,8 @@ POST http://localhost:3000/api/contactos
 Header: x-api-key: Admin123
 Body:
 {
-  "nombre": "Juan Pérez",
-  "email": "juan@gmail.com",
+  "nombre": "Alexandra Sanchez",
+  "email": "ale123@gmail.com",
   "telefono": "912345678"
 }
 
