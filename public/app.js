@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const listaDiv = document.getElementById('listaContactos');
     
     const API_URL = '/api/contactos';
-    const API_KEY = 'token-secreto-123'; 
+    const API_KEY = 'Admin123'; 
 
     // 1. Cargar contactos (GET)
     const cargarContactos = async () => {
