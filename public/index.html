@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Contactos - Laboratorio</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 600px; margin: 30px auto; padding: 0 15px; color: #333; }
+        h2 { border-bottom: 2px solid #007bff; padding-bottom: 8px; color: #007bff; }
+        form { background: #f9f9f9; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px; margin-bottom: 30px; }
+        .campo { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 6px; font-weight: bold; font-size: 14px; }
+        input { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        input:focus { border-color: #007bff; outline: none; }
+        button { background: #007bff; color: white; border: none; padding: 12px 20px; font-size: 15px; cursor: pointer; border-radius: 4px; width: 100%; font-weight: bold; }
+        button:hover { background: #0056b3; }
+        
+        /* Contenedor de la tarjeta */
+        .contacto-card { background: #fff; border-left: 5px solid #28a745; padding: 15px; margin-bottom: 12px; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border-top: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; }
+        .contacto-info { flex-grow: 1; }
+        .contacto-card strong { color: #222; font-size: 16px; }
+        .contacto-card p { margin: 4px 0 0 0; font-size: 14px; color: #666; }
+        
+        /* BOTÓN ELIMINAR ROJO */
+        .btn-eliminar { background: #dc3545; color: white; border: none; padding: 6px 12px; font-size: 13px; cursor: pointer; border-radius: 4px; width: auto; font-weight: normal; }
+        .btn-eliminar:hover { background: #c82333; }
+    </style>
+</head>
+<body>
+
+    <h2>Agregar Nuevo Contacto</h2>
+    <form id="contactoForm">
+        <div class="campo">
+            <label for="nombre">Nombre Completo *</label>
+            <input type="text" id="nombre" placeholder="Ej: Juan Pérez" required>
+        </div>
+        <div class="campo">
+            <label for="email">Correo Electrónico *</label>
+            <input type="email" id="email" placeholder="Ej: juan@correo.com" required>
+        </div>
+        <div class="campo">
+            <label for="telefono">Teléfono</label>
+            <input type="text" id="telefono" placeholder="Ej: +56912345678">
+        </div>
+        <button type="submit">Guardar Contacto</button>
+    </form>
+
+    <h2>Contactos Registrados</h2>
+    <div id="listaContactos"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
